@@ -13,7 +13,7 @@ module.exports = {
     target: 'es2018',
   },
   plugins: [
-    /* ... */
+    '@snowpack/plugin-sass',
   ],
   packageOptions: {
     /* ... */
