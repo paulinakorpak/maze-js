@@ -27,13 +27,28 @@
     }
 
     .path {
-      background-color: lightgray;
+      background-color: white;
     }
   }
 
   .hero {
     position: absolute;
     color: deeppink;
+    animation-name: animateHero;
+    animation-duration: 2.2s;
+  }
+
+  @keyframes animateHero {
+    0% {
+      opacity: 1;
+      font-size: 200px;
+      left: calc(50% - 80px);
+    }
+    100% {
+      opacity: 0;
+      font-size: 200px;
+      left: calc(50% - 80px);
+    }
   }
 
   .result {
@@ -45,7 +60,9 @@
     height: 50%;
 
     h2 {
-      color: green;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      color: deeppink;
     }
   }
 }
