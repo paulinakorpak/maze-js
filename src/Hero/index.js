@@ -5,5 +5,10 @@ export const Hero = (element, fieldSize) => {
     element.style.padding = `${(fieldSize * 0.1) / 2}px`;
   };
 
-  return { init };
+  const move = (row, col) => {
+    element.style.top = `${row * fieldSize}px`;
+    element.style.left = `${col * fieldSize}px`;
+  };
+
+  return { init, move };
 };

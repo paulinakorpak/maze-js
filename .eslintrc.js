@@ -14,5 +14,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-param-reassign': ['error', { props: false }],
     'no-plusplus': 'off',
+    'default-case': 'off',
   },
 };

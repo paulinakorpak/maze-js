@@ -1,10 +1,13 @@
 import { boards } from './boards';
+import { path } from './fields';
 
 export const Board = (element, fieldSize) => {
+  let board = null;
+
   const getRandomBoard = () => boards[Math.floor(Math.random() * boards.length)];
 
   const init = () => {
-    const board = getRandomBoard();
+    board = getRandomBoard();
 
     let html = '';
     for (let row = 0; row < board.grid.length; row++) {
@@ -21,5 +24,10 @@ export const Board = (element, fieldSize) => {
     element.innerHTML = html;
   };
 
-  return { init };
+  const canMove = (row, col) => {
+    const { grid } = board;
+    return grid[row] && grid[row][col] && grid[row][col].toString() === path.toString();
+  };
+
+  return { init, canMove };
 };
