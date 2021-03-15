@@ -14,6 +14,19 @@
     margin-bottom: 40px;
   }
 
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+
+    .wall {
+      background-color: black;
+    }
+
+    .path {
+      background-color: lightgray;
+    }
+  }
+
   .result {
     display: none;
     flex-direction: column;
