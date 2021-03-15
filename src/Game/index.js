@@ -1,4 +1,5 @@
 import { Board } from '../Board';
+import { Hero } from '../Hero';
 
 export const Game = (element, fieldSize) => {
   const init = () => {
@@ -6,6 +7,7 @@ export const Game = (element, fieldSize) => {
     const board = Board(boardElement, fieldSize).init();
 
     const heroElement = element.querySelector('.hero');
+    const hero = Hero(heroElement, fieldSize).init();
   };
 
   return { init };
