@@ -1,0 +1,98 @@
+{
+  "inputs": {
+    "styles/main.css": {
+      "bytes": 988,
+      "imports": []
+    },
+    "dist/Board/fields.js": {
+      "bytes": 56,
+      "imports": []
+    },
+    "dist/Board/boards.js": {
+      "bytes": 18487,
+      "imports": [
+        {
+          "path": "dist/Board/fields.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/Board/index.js": {
+      "bytes": 1044,
+      "imports": [
+        {
+          "path": "dist/Board/boards.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/Board/fields.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/Hero/index.js": {
+      "bytes": 348,
+      "imports": []
+    },
+    "dist/Game/index.js": {
+      "bytes": 1724,
+      "imports": [
+        {
+          "path": "dist/Board/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/Hero/index.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/index.js": {
+      "bytes": 175,
+      "imports": [
+        {
+          "path": "dist/Game/index.js",
+          "kind": "import-statement"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "../~~bundle~~/styles/main.css": {
+      "imports": [],
+      "entryPoint": "styles/main.css",
+      "inputs": {
+        "styles/main.css": {
+          "bytesInOutput": 776
+        }
+      },
+      "bytes": 777
+    },
+    "../~~bundle~~/dist/index.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "dist/index.js",
+      "inputs": {
+        "dist/Board/fields.js": {
+          "bytesInOutput": 22
+        },
+        "dist/Board/boards.js": {
+          "bytesInOutput": 6110
+        },
+        "dist/Board/index.js": {
+          "bytesInOutput": 459
+        },
+        "dist/Hero/index.js": {
+          "bytesInOutput": 148
+        },
+        "dist/Game/index.js": {
+          "bytesInOutput": 753
+        },
+        "dist/index.js": {
+          "bytesInOutput": 76
+        }
+      },
+      "bytes": 7569
+    }
+  }
+}
