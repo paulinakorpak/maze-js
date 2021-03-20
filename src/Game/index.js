@@ -3,10 +3,7 @@ import { Hero } from '../Hero';
 
 export const Game = (element, fieldSize) => {
   const state = {
-    position: {
-      row: 1,
-      col: 0,
-    },
+    position: null,
   };
 
   let board = null;
@@ -28,10 +25,22 @@ export const Game = (element, fieldSize) => {
     return newPosition;
   };
 
+  const showResultScreen = () => {
+    const result = element.querySelector('.result');
+    const wrapper = element.querySelector('.wrapper');
+    wrapper.style.display = 'none';
+    result.style.display = 'flex';
+  };
+
   const move = (row, col) => {
     if (board.canMove(row, col)) {
       hero.move(row, col);
       state.position = { row, col };
+    }
+
+    const exitPosition = board.getExitPosition();
+    if (row === exitPosition.row && col === exitPosition.col) {
+      showResultScreen();
     }
   };
 
@@ -43,6 +52,9 @@ export const Game = (element, fieldSize) => {
     const heroElement = element.querySelector('.hero');
     hero = Hero(heroElement, fieldSize);
     hero.init();
+
+    const enterPosition = board.getEnterPosition();
+    move(enterPosition.row, enterPosition.col);
 
     document.addEventListener('keydown', (e) => {
       const newPosition = calculateNewPosition(e);

@@ -2,6 +2,14 @@ import { wall, path } from './fields';
 
 export const boards = [
   {
+    enter: {
+      row: 1,
+      col: 0,
+    },
+    exit: {
+      row: 29,
+      col: 30,
+    },
     grid: [
       [wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall],
       [path, path, wall, path, wall, path, path, path, wall, path, path, path, path, path, path, path, path, path, path, path, wall, path, path, path, path, path, path, path, path, path, wall],
@@ -37,6 +45,14 @@ export const boards = [
     ],
   },
   {
+    enter: {
+      row: 1,
+      col: 0,
+    },
+    exit: {
+      row: 29,
+      col: 30,
+    },
     grid: [
       [wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall],
       [path, path, path, path, path, path, path, path, wall, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, wall, path, path, path, path, path, wall],
@@ -72,6 +88,14 @@ export const boards = [
     ],
   },
   {
+    enter: {
+      row: 1,
+      col: 0,
+    },
+    exit: {
+      row: 29,
+      col: 30,
+    },
     grid: [
       [wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall, wall],
       [path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, path, wall],

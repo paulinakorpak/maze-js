@@ -24,10 +24,15 @@ export const Board = (element, fieldSize) => {
     element.innerHTML = html;
   };
 
+  const getEnterPosition = () => board.enter;
+  const getExitPosition = () => board.exit;
+
   const canMove = (row, col) => {
     const { grid } = board;
     return grid[row] && grid[row][col] && grid[row][col].toString() === path.toString();
   };
 
-  return { init, canMove };
+  return {
+    init, canMove, getEnterPosition, getExitPosition,
+  };
 };
