@@ -1,2 +1,2 @@
-export const wall = Symbol('wall');
-export const path = Symbol('path');
+export const wall = 'wall';
+export const path = 'path';

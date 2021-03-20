@@ -12,7 +12,7 @@ export const Board = (element, fieldSize) => {
     let html = '';
     for (let row = 0; row < board.grid.length; row++) {
       for (let col = 0; col < board.grid[row].length; col++) {
-        const fieldType = board.grid[row][col].description;
+        const fieldType = board.grid[row][col];
         html = `${html} <div class="${fieldType}" style="width: ${fieldSize}px; height: ${fieldSize}px"></div>`;
       }
     }
@@ -27,10 +27,7 @@ export const Board = (element, fieldSize) => {
   const getEnterPosition = () => board.enter;
   const getExitPosition = () => board.exit;
 
-  const canMove = (row, col) => {
-    const { grid } = board;
-    return grid[row] && grid[row][col] && grid[row][col].toString() === path.toString();
-  };
+  const canMove = (row, col) => board.grid[row] && board.grid[row][col] && board.grid[row][col] === path;
 
   return {
     init, canMove, getEnterPosition, getExitPosition,
