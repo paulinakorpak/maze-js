@@ -1,7 +1,7 @@
 {
   "inputs": {
     "styles/main.css": {
-      "bytes": 988,
+      "bytes": 2076,
       "imports": []
     },
     "dist/Board/fields.js": {
@@ -35,7 +35,7 @@
       "imports": []
     },
     "dist/Game/index.js": {
-      "bytes": 1724,
+      "bytes": 2515,
       "imports": [
         {
           "path": "dist/Board/index.js",
@@ -48,7 +48,7 @@
       ]
     },
     "dist/index.js": {
-      "bytes": 175,
+      "bytes": 312,
       "imports": [
         {
           "path": "dist/Game/index.js",
@@ -63,10 +63,10 @@
       "entryPoint": "styles/main.css",
       "inputs": {
         "styles/main.css": {
-          "bytesInOutput": 776
+          "bytesInOutput": 1647
         }
       },
-      "bytes": 777
+      "bytes": 1648
     },
     "../~~bundle~~/dist/index.js": {
       "imports": [],
@@ -86,13 +86,13 @@
           "bytesInOutput": 148
         },
         "dist/Game/index.js": {
-          "bytesInOutput": 753
+          "bytesInOutput": 1122
         },
         "dist/index.js": {
-          "bytesInOutput": 76
+          "bytesInOutput": 166
         }
       },
-      "bytes": 7569
+      "bytes": 8028
     }
   }
 }
