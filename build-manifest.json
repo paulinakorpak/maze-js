@@ -35,7 +35,7 @@
       "imports": []
     },
     "dist/Game/index.js": {
-      "bytes": 2515,
+      "bytes": 2703,
       "imports": [
         {
           "path": "dist/Board/index.js",
@@ -86,13 +86,13 @@
           "bytesInOutput": 148
         },
         "dist/Game/index.js": {
-          "bytesInOutput": 1122
+          "bytesInOutput": 1219
         },
         "dist/index.js": {
           "bytesInOutput": 166
         }
       },
-      "bytes": 8028
+      "bytes": 8125
     }
   }
 }
