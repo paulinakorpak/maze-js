@@ -15,5 +15,7 @@ module.exports = {
     'no-param-reassign': ['error', { props: false }],
     'no-plusplus': 'off',
     'default-case': 'off',
+    'no-use-before-define': 'off',
+    'no-unused-expressions': 'off',
   },
 };

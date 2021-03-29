@@ -1,8 +1,12 @@
-.app {
+@mixin flex-props {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.app {
+  @include flex-props;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 
@@ -16,6 +20,52 @@
 
   .wrapper {
     position: relative;
+  }
+
+  .arrows {
+    display: none;
+    grid-template-columns: 35px 35px 35px;
+    grid-template-rows: 35px 35px 35px;
+    margin-top: 2rem;
+    animation-name: animateArrows;
+    animation-duration: 2.2s;
+
+    .up {
+      grid-area: 1 / 2 / 2 / 3;
+      @include flex-props;
+    }
+
+    .left {
+      grid-area: 2 / 1 / 3 / 2;
+      @include flex-props;
+    }
+
+    .down {
+      grid-area: 3 / 2 / 4 / 3;
+      @include flex-props;
+    }
+
+    .right {
+      grid-area: 2 / 3 / 3 / 4;
+      @include flex-props;
+    }
+
+    i {
+      font-size: 30px;
+      color: #737373;
+    }
+  }
+
+  @keyframes animateArrows {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .board {
@@ -66,3 +116,4 @@
     }
   }
 }
+
