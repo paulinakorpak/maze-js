@@ -67,13 +67,17 @@ export const Game = (element, fieldSize) => {
   };
 
   const showResultScreen = () => {
-    const result = element.querySelector('.result');
     const wrapper = element.querySelector('.wrapper');
     const arrows = element.querySelector('.arrows');
+    const result = element.querySelector('.result');
 
     wrapper.style.display = 'none';
     arrows.style.display = 'none';
     result.style.display = 'flex';
+  };
+
+  const restart = () => {
+    window.location.reload(true);
   };
 
   const init = () => {
@@ -92,6 +96,9 @@ export const Game = (element, fieldSize) => {
 
     const arrowButtons = element.querySelectorAll('.arrows i');
     Array.from(arrowButtons).map((arrow) => arrow.addEventListener('click', handleMove));
+
+    const restartButton = element.querySelector('.result button');
+    restartButton.addEventListener('click', restart);
   };
 
   return { init };
